@@ -7,7 +7,10 @@ In this script I also added the Hashid and Hash-identifier tools.
 
 ## Requirements
 ```bash
+# Debian
 $ apt-get install hashcat && apt-get install hashid && apt-get install hash-identifier
+# Arch
+$ sudo pacman -S hashcat hashid hash-identifier
 ```
 
 # Distributions
