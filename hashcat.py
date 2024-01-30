@@ -86,13 +86,21 @@ if (hash=="1700"):
         os.system("clear && hashcat -m 1700 -a 0  "+hashfile1700+" "+dict1700+" --status --force --potfile-disable")
         
 if (hash=="8"):
-        os.system("apt-get install hashid && clear")
-        hashtype = input("Input Hash :")
-        os.system("clear && hashid "+hashtype)
+        try:
+                os.system("apt-get install hashid && clear")
+                hashtype = input("Input Hash :")
+                os.system("clear && hashid "+hashtype)
+        except:
+                os.system("sudo pacman -S hashid && clear")
+                hashtype = input("Input Hash :")
+                os.system("clear && hashid "+hashtype)
 
 if (hash=="9"):
-        os.system("apt-get install hash-identifier && clear")
-        hashtype2 = input("Input Hash :")
-        os.system("clear && hash-identifier "+hashtype2)
-
-        
+        try:
+                os.system("apt-get install hash-identifier && clear")
+                hashtype2 = input("Input Hash :")
+                os.system("clear && hash-identifier "+hashtype2)
+        except:
+                os.system("sudo pacman -S hash-identifier && clear")
+                hashtype2 = input("Input Hash :")
+                os.system("clear && hash-identifier "+hashtype2)
